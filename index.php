@@ -36,7 +36,7 @@ switch($_POST['action']) {
 
     $id = $_POST['id'];
     if(is_numeric($id)) {
-      $updateQuery = 'SELECT * FROM todo WHERE done=true'; // IMPLEMENT ME
+      $updateQuery = 'UPDATE todo SET title = Manger WHERE id = 4 '; // IMPLEMENT ME
       if(!$db->query($updateQuery)) {
         die(print_r($db->errorInfo(), true));
       }
@@ -68,7 +68,7 @@ switch($_POST['action']) {
 /**
  * Select all tasks from the database.
  */
-$selectQuery = ''; // IMPLEMENT ME
+$selectQuery = 'SELECT * FROM todo'; // IMPLEMENT ME
 $items = $db->query($selectQuery);
 ?>
 
